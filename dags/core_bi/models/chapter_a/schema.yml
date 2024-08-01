@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+- name: imdb
+  description: test src data for chapter A
+#  schema: ssv
+  tables:
+  - name: actors
+    description: origin actors data
+
+models:
+  - name: gender_actors_count
+    description: "how many actors M/F?"
+    columns:
+      - name: gender
+        description: "gender"
+        data_tests:
+          - unique
+          - not_null
+      - name: cnt
+        description: "gender count"
+        data_tests:
+          - not_null

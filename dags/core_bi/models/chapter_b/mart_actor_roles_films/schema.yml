@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: actor_roles_films
+    description: "how many roles on actor?"
+    columns:
+      - name: actor
+        description: "actor name"
+        data_tests:
+          - not_null
+      - name: movies
+        description: "array of actor movies"
+        data_tests:
+          - not_null
+      - name: movies_count
+        description: "movies_count"
+        data_tests:
+          - not_null
+      - name: movies_id
+        description: "movies_id"
+        data_tests:
+          - not_null

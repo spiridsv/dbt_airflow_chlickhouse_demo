@@ -1,0 +1,59 @@
+version: 2
+
+models:
+  - name: fin_mart
+    description: "final mart"
+    columns:
+      - name: actor_id
+        description: " this is  actor_id column"
+        data_tests:
+          - not_null
+      - name: actors
+        description: " this is  actors column"
+      - name: b.id
+        description: " this is  b.id column"
+        data_tests:
+          - not_null
+      - name: cnt
+        description: " this is  cnt column"
+        data_tests:
+          - not_null
+      - name: gender
+        description: " this is  gender column"
+        data_tests:
+          - not_null
+      - name: id
+        description: " this is  id column"
+        data_tests:
+          - not_null
+      - name: length(actors)
+        description: " this is  length(actors) column"
+        data_tests:
+          - not_null
+      - name: length(roles)
+        description: " this is  length(roles) column"
+        data_tests:
+          - not_null
+      - name: myid
+        description: " this is  myid column"
+        data_tests:
+          - not_null
+      - name: name
+        description: " this is  name column"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('mart2')
+              field: name
+      - name: roles
+        description: " this is  roles column"
+        data_tests:
+          - not_null
+      - name: y.gender
+        description: " this is  y.gender column"
+        data_tests:
+          - not_null
+      - name: y.id
+        description: " this is  y.id column"
+        data_tests:
+          - not_null

@@ -1,0 +1,13 @@
+ch_profile:
+  target: dev
+  outputs:
+    dev:
+      type: clickhouse
+      schema: ssv
+      driver: http #native
+      host: localhost #172.20.4.182
+      port: 8123 #18193
+      user: default
+      password: ''
+      secure: False
+      check_exchange: False

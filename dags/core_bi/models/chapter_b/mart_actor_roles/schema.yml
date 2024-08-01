@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+- name: imdb
+  description: test src data for chapter B, Mart actor roles
+  tables:
+  - name: roles
+    description: origin roles data
+
+models:
+  - name: actor_roles
+    description: "how many roles on actor?"
+    columns:
+      - name: id
+        description: "actor id"
+        data_tests:
+          - not_null
+          - unique
+      - name: actor
+        description: "actor name"
+        data_tests:
+          - not_null
+      - name: roles
+        description: "array of actor roles"
+      - name: roles_count
+        description: "how many each actor has roles?"
+        data_tests:
+          - not_null

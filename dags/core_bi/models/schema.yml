@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+- name: imdb
+  description: IMDB sources
+  tables:
+  - name: movies
+    description: origin movies data

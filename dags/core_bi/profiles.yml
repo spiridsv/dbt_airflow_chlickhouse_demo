@@ -1,0 +1,23 @@
+ch_profile:
+  target: dev
+  outputs:
+    dev:
+      type: clickhouse
+      schema: core_bi
+      driver: http
+      host: clickhouse
+      port: 8123
+      user: default
+      password: ''
+      secure: False
+      check_exchange: False
+    x:
+      type: clickhouse
+      schema: core_bi
+      driver: http
+      host: localhost
+      port: 8123
+      user: default
+      password: ''
+      secure: False
+      check_exchange: False

@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+- name: imdb
+  description: test src data
+#  schema: ssv
+  tables:
+  - name: movies
+    description: origin movies data
+  - name: roles
+    description: origin roles data
+
+models:
+  - name: roles_in_movie
+    description: "roles in movie"
+    columns:
+      - name: id
+        description: "mov id"
+        data_tests:
+          - unique
+          - not_null
+      - name: name
+        description: "movie name"
+        data_tests:
+          - not_null
+  - name: mart2
+    description: "mart # 2"
+

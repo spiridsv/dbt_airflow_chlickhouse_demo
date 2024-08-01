@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: top_mart_a
+    description: "final mart"
+    columns:
+      - name: actor
+        description: "actor name"
+        data_tests:
+          - not_null
+      - name: movies
+        description: "actor films"
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('actor_roles_films')
+              field: movies

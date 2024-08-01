@@ -1,0 +1,43 @@
+version: 2
+
+sources:
+- name: imdb
+  description: test src data
+#  schema: ssv
+  tables:
+  - name: actors
+    description: origin actors data
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "original PK"
+        data_tests:
+          - unique
+          - not_null
+      - name: myid
+        description: "new PK"
+        data_tests:
+          - unique
+          - not_null
+      - name: gender
+        description: "gender"
+        data_tests:
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+#    schema: "z"
+    columns:
+      - name: z
+        description: "just Zzz"
+      - name: gender
+        description: "gender"
+        data_tests:
+          - not_null
+      - name: cnt
+        description: "cnt of gender"
+        data_tests:
+          - not_null
